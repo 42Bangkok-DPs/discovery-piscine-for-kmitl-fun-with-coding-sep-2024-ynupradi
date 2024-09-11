@@ -1,0 +1,17 @@
+table{
+    border-collapse: collapse;
+    }
+    .box1 {
+        background-color:yellowgreen ;
+        width: 700px;
+        max-width: 100%;
+        height: 100px;
+        display:inline-block;
+    }
+    .box2 {
+        background-color:bisque ;
+        width: 700px;
+        max-width: 100%;
+        height: 100px;
+        display:inline-block;
+    }
