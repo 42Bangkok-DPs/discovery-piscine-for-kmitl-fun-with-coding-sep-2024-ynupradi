@@ -1,0 +1,22 @@
+table{
+    border-collapse: collapse;
+    white-space: nowrap;
+    width: 100%;
+    height: 100px;
+    }
+    .box1 {
+        background-color:yellowgreen ;
+        width: 700px;
+        width: 100%;
+        height: 100px;
+        display:inline-block;
+        resize: horizontal;
+    }
+    .box2 {
+        background-color:bisque ;
+        width: 700px;
+        width: 100%;
+        height: 100px;
+        display:inline-block;
+        resize: horizontal;
+    }
