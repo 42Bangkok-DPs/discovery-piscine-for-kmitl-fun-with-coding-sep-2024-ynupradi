@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>randombackgroundcolor</title>
+        <meta charset="utf=8">
+        <meta name = "viewport" content="width=device-width,initila-scale=1">
+        <link rel="stylesheet" href="backgroound.css">
+    </head>
+    <body>
+      <button type = "button" onclick ="rancolor()">Click me!</button>
+      <script>
+        function rancolor() {
+            var letter = "0123456789ABCDEF"
+            var color = '#';
+            for(var i = 0; i < 6; i++) {
+                color += letter[Math.floor(Math.random()*letter.length)];
+            }
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+    </body>
+</html>
