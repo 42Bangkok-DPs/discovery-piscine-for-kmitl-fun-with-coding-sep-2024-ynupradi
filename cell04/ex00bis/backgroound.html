@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#back").click(function(){
+                    $('body').css('background-color', rancolor());
+            });
+        });
+            function rancolor() {
+            var letter = "0123456789ABCDEF"
+            var color = '#';
+            for(var i = 0; i < 6; i++) {
+                color += letter[Math.floor(Math.random()*letter.length)];
+            }
+            return color;
+        }
+        </script>
+    </head>
+    <body>
+        <button id = "back" type = "button" onclick ="rancolor()">Click me!</button>
+    </body>
+</html>
