@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: left;
+            }
+            button {
+                height: 200px;
+                width: 200px;
+                border-radius:50%;
+                background-color: red;
+                border: 0px;
+            }
+        </style>
+        <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+             $(document).ready(function() {
+                var heigth = 200;
+                var width = 200;
+                const colors = ["red","green","blue"];
+                var numcolor = 0;
+                $("#round").click(function() {
+                    if(heigth >= 415) {
+                    heigth = 200;
+                    width = 200;
+                    }else {
+                    heigth += 10;
+                    width += 10;
+                    }
+
+                    numcolor = (numcolor + 1) % colors.length;
+                    $('#round').css('background-color', colors[numcolor]);
+                    $('#round').css('height', heigth+"px");
+                    $('#round').css('width', width+"px");
+                });
+                $("#round").mouseout(function() {
+                    if(heigth <= 200) {
+                    heigth = 200;
+                    width = 200;
+                    }else {
+                    heigth -= 5;
+                    width -= 5;
+                }
+                numcolor = (numcolor + 2) % colors.length;
+                    $('#round').css('background-color', colors[numcolor]);
+                    $('#round').css('height', heigth+"px");
+                    $('#round').css('width', width+"px");
+                });
+             });
+        </script>
+    </head>
+    <body>
+        <button id = "round" class = "button" ></button>
+    </body>
+</html>
