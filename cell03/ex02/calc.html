@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charser = "utf=8">
+        <meta name = "viewport" content="width=device-width,initila-scale=1">
+        <style>
+            .closebutton {
+                color: black;
+                margin-bottom-left: 7px;
+                font-size: 22px;
+                cursor: pointer;
+                background-color: gold;
+            }
+
+            .closebutton:hover {
+                color:red;
+            }
+        </style>
+    </head>
+    <body">
+    <form method = "POST">
+        <input id = "input1" type="text" placeholder="number">
+        <select id = "operator" name="">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input id = "input2" type="text" placeholder="number">
+        <button class = "closebutton " onclick = "calculator()">Submit</button>
+    </form>
+        <script>
+            let intervalId;
+            function calculator() {
+                let num1 = document.getElementById('input1').value;
+                let num2 = document.getElementById('input2').value;
+                let operator = document.getElementById("operator").value;
+                num1 = Number(num1);
+                num2 = Number(num2);
+                if(num1 < 0|| num2 < 0 || !Number.isInteger(num1)||!Number.isInteger(num2)) {
+                    console.log("Error :(")
+                    alert('Error :(')
+                    return;
+                }else if((operator == '/' && num2 == 0) || (operator == '%' && num2 == 0)) {
+                    console.log("It's over 9000")
+                    alert('It\'s over 9000!')
+                    return;
+                }else {
+                    if(operator == '+') {
+                        console.log(num1+num2)
+                        alert(num1+num2)
+                        return;
+                    }else if(operator == '-') {
+                        console.log(num1-num2)
+                        alert(num1-num2)
+                        return;
+                    }else if(operator == '*') {
+                        console.log(num1*num2)
+                        alert(num1*num2)
+                        return;
+                    }else if(operator == '/') {
+                        console.log(num1/num2)
+                        alert(num1/num2)
+                        return;
+                    }else if(doperator == '%') {
+                        console.log(num%+num2)
+                        alert(num1%num2)
+                        return;
+                    }
+                }
+            }
+            function reminder(){
+            clearInterval(intervalId);
+            alert("Please, use me...");
+            intervalId = setInterval(reminder, 30000);
+            }
+            intervalId = setInterval(reminder, 30000);
+        </script>
+    </body>
+</html>
