@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #FFFF;
+}
+
+.navcol {
+    background-color: #0033a0;
+    overflow: hidden;
+}
+
+.navtit {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.link {
+    display: block;
+    padding: 24px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(200, 207, 212);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.link:hover {
+    background-color: #0056b3;
+}
